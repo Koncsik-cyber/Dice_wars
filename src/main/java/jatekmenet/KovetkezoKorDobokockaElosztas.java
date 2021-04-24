@@ -5,6 +5,10 @@ import main.java.beallitasok.jatekosertekek.Ellenfelek;
 import main.java.beallitasok.rendomszamgenerator.RandomSzamGenerator;
 import main.java.palya.negyszogracs.Negyszogracs;
 
+/**
+ * A körök közzöt-i dobokocka elosztás
+ * @author Koncsik Benedek (G7KJC7)
+ */
 public class KovetkezoKorDobokockaElosztas {
 
     private int elosztahtoDobokockaSzam;

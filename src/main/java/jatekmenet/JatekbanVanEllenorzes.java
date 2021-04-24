@@ -7,6 +7,11 @@ import main.java.menu.beallitas.FoMenuBeallitas;
 import main.java.palya.hatszogracs.Hatszogracs;
 import main.java.palya.negyszogracs.Negyszogracs;
 import main.java.palya.palyaelem.PalyaElem;
+
+/**
+ * Ellenörzi, hogy a gép/játékos, játékban van e vagy kiesett
+ * @author Koncsik Benedek (G7KJC7)
+ */
 public class JatekbanVanEllenorzes {
 
     protected PalyaElem[][][] palya;
