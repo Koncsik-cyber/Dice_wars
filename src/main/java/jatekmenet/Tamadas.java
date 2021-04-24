@@ -11,9 +11,25 @@ import main.java.palya.hatszogracs.Hatszogracs;
 import main.java.palya.negyszogracs.Negyszogracs;
 import main.java.beallitasok.rendomszamgenerator.RandomSzamGenerator;
 import main.java.palya.palyaelem.PalyaElem;
+
+/**
+ * Támadás!
+ * @author Koncsik Benedek (G7KJC7)
+ */
 public class Tamadas {
     public Tamadas(){}
     protected  PalyaElem[][][] palyaTipus;
+
+    /**
+     * Támadás elvégzése dobokocka dobás nyertes kihirdetése.
+     * @param honanX Ahonan indul a támadáas X kordinátája
+     * @param honnanY Ahonan indul a támadáas Y kordinátája
+     * @param honnanZ Ahonan indul a támadáas Z kordinátája ha négyszögrács a pálya akkor a Z kordináta 0-a ha hatszögrács akkor 2
+     * @param hovaX Ahova indul a támadáas X kordinátája
+     * @param hovaY Ahova indul a támadáas Y kordinátája
+     * @param hovaZ Ahova indul a támadáas Z kordinátája ha négyszögrács a pálya akkor a Z kordináta 0-a ha hatszögrács akkor 2
+     * @param negyszogracse boolean ha igaz akkor négyszögrács a pálya ha hamis akkor hatszögracs
+     */
     public void tamdasIndul(int honanX, int honnanY, int honnanZ, int hovaX, int hovaY, int hovaZ, boolean negyszogracse){
         if (negyszogracse) palyaTipus = Negyszogracs.palya;
         else palyaTipus = Hatszogracs.palya;

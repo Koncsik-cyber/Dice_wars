@@ -9,6 +9,7 @@ public class MentesAdatKezeles {
 
     /**
      * Páklya elmentése
+     * @author Koncsik Benedek (G7KJC7)
      * @param palya megkaplya az aktuálisan elkészitett négy/hat-szögrács pályát amit soronként elment a mentesAdat listába
      */
     public void mentesPalya(PalyaElem[][][] palya){

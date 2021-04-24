@@ -7,7 +7,6 @@ import main.java.menu.beallitas.MainMenuPont;
 /**
  *Dice Wars!
  * @author Koncsik Benedek (G7KJC7)
- * @version 1.0 Béta
  * Debugg Mod:
  * -ha az argumentumnak a szomszedok paramétert adjuk akkor kiirja a palya első elemének aszomszédait
  * -ha az argumentumnak a palyaMegjelenites irjuk be akkor meg jelen a pálya
@@ -21,9 +20,16 @@ public class Main {
         argumentum = args;
         beallitas();
     }
-public static String[] argumentum(){
+    /**
+     * @return parancssori argumentummal tér vissza ami a debugg funkcióhoz kell
+     */
+    public static String[] argumentum(){
         return argumentum;
 }
+
+    /**
+     * beállitás metodus végzi a eéllitások elinditását
+     */
     public static void beallitas(){
         FoMenu foMenu = new FoMenu(argumentum());
         Scanner scanf = new Scanner(System.in);

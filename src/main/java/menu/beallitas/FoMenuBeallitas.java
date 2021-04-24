@@ -1,7 +1,7 @@
 package main.java.menu.beallitas;
 import main.java.Main;
 /**
-     *Játék menü!
+     *Ebben az osztályban tárolodik az alap értékek és innen indul a tényleges játék
      * @author Koncsik Benedek (G7KJC7)
      */
     public class FoMenuBeallitas {

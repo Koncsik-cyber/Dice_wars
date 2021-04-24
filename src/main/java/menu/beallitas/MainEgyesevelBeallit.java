@@ -5,6 +5,11 @@ import main.java.menu.FoMenu;
 
 import java.util.Scanner;
 
+/**
+ * Ehyesével beállitás!
+ * @author Koncsik Benedek (G7KJC7)
+ * Ez az osztály ugy megy végig a beállitásokon, hogy csak egyesével nem kell mindenen végig menni kilehet választani mit szeretne az ember beálitani
+ */
 public class MainEgyesevelBeallit extends Main {
     public MainEgyesevelBeallit() {
         FoMenu foMenu = new FoMenu(argumentum());

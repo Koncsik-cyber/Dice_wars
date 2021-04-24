@@ -9,6 +9,11 @@ import main.java.palya.megjelenites.PalyaEmberTeruletSzam;
 import java.io.IOException;
 import java.util.Scanner;
 
+/**
+ * Játék menü!
+ * @author Koncsik Benedek (G7KJC7)
+ * Ha az emberi játékos jön kiirja melyik számmal mit végez a program. Ezek után a beírt számnak megfelelöen hajta végre a meghivot metodusokat
+ */
 public class JatekMenuEmber extends JatekMenu {
 public JatekMenuEmber(){
     new PalyaEmberTeruletSzam();

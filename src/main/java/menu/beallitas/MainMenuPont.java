@@ -2,6 +2,10 @@ package main.java.menu.beallitas;
 
 import main.java.Main;
 
+/**
+ * A fömenu pontokat írja ki! számolást nem végez nem hiv meg semmit.
+ * @author Koncsik Benedek (G7KJC7)
+ */
 public class MainMenuPont extends Main {
     public MainMenuPont(){
         System.out.println("Beállitások--> 1");

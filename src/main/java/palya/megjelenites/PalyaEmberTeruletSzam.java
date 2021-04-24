@@ -2,6 +2,11 @@ package main.java.palya.megjelenites;
 
 import main.java.beallitasok.jatekosertekek.Ellenfelek;
 import main.java.mentesbetoltes.MentesAdatKezeles;
+
+/**
+ * A játék közbeni területekeit írja ki
+ * @author Koncsik Benedek (G7KJC7)
+ */
 public class PalyaEmberTeruletSzam {
     public PalyaEmberTeruletSzam(){
         for (int i = 0; i < Ellenfelek.ellenfelekTomb.size(); i++)

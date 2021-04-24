@@ -6,6 +6,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Mentés beolvasása!
+ * @author Koncsik Benedek (G7KJC7)
+ * soronként beolvassa a mentes.txt -böl az adatokat
+ */
 public class ReadFile {
     public List<String> Readfile(String fajlNev) throws IOException {
         ArrayList<String> beolvasott = new ArrayList<>();

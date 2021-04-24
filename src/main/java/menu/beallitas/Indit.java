@@ -8,6 +8,12 @@ import main.java.palya.TeruletElosztas;
 import main.java.palya.hatszogracs.Hatszogracs;
 import main.java.palya.negyszogracs.Negyszogracs;
 
+/**
+ * Ez a indit osztály hivja meg a palya osztályt ami majd generálja a kiválasztott pálya tipust
+ * @author Koncsik Benedek (G7KJC7)
+ *A FoMenu.beVanÉllitva staticus boolean érték tárolja, azt, hogy a ember külön végig ment a gépi ellenfelek beéllitásán vagy nem.
+ * Ha nem akkor meghívja a gepiEllenfél automatikus beállitását
+ */
 public class Indit extends FoMenuBeallitas {
     public Indit(int valaszt){
         switch (valaszt){

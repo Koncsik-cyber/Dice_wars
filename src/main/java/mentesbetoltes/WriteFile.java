@@ -4,6 +4,11 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
+/**
+ * Ez az osztály végzi a fájba írást mentésnél!
+ * @author Koncsik Benedek (G7KJC7)
+ * A metéshez a soroket egy listában tárolodik és a lista elemek a külön sorok
+ */
 public class WriteFile {
     public WriteFile(String fajlNev) throws IOException {
         BufferedWriter bw = new BufferedWriter(new FileWriter(fajlNev));

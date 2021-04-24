@@ -7,6 +7,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * Ez az osztály végzi a mentett játék ujra játszását
+ * @author Koncsik Benedek (G7KJC7)
+ */
 public class JatekMenuBetoltes {
     private ArrayList<String> kiras = new ArrayList<>();
     public JatekMenuBetoltes(){
