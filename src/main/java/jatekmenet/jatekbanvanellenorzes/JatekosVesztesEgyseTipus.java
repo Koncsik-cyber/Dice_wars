@@ -7,8 +7,8 @@ import main.java.mentesbetoltes.MentesAdatKezeles;
  * Játlkost nézi, hogy játékban van-e. Egyes tipus azt nézi, hogy van e más gépi ellenfél.
  * @author Koncsik Benedek (G7KJC7)
  */
-public class JatekosVesztesEgyseTipus extends JatekbanVanEllenorzes {
-    public JatekosVesztesEgyseTipus(){
+public class JatekosVesztesEgyseTipus {
+    public JatekosVesztesEgyseTipus(int gepiEllenfelek){
         if (gepiEllenfelek == 0) {
             System.out.println(new MentesAdatKezeles().MentesString("A játékos nyert"));
             System.out.println(new MentesAdatKezeles().MentesString("<================ :) ================>"));

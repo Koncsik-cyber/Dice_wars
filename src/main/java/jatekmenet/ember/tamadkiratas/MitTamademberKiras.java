@@ -2,10 +2,11 @@ package main.java.jatekmenet.ember.tamadkiratas;
 
 import main.java.jatekmenet.ember.MitTamadhatEmber;
 import main.java.mentesbetoltes.MentesAdatKezeles;
+import main.java.palya.palyaelem.PalyaElem;
 import main.java.palya.palyaelem.Szomszedok;
 
-public class MitTamademberKiras extends MitTamadhatEmber {
-    public MitTamademberKiras(int i, int honanX, int honanY, int honanZ) {
+public class MitTamademberKiras {
+    public MitTamademberKiras(int i, int honanX, int honanY, int honanZ, PalyaElem[][][] palyaTipus) {
         Szomszedok szomszed = palyaTipus[honanX][honanY][honanZ].szomszedok[i];
         if (palyaTipus[szomszed.szomszedN][szomszed.szomszedM][szomszed.szomszedX].kie != 1) {
             switch (i) {

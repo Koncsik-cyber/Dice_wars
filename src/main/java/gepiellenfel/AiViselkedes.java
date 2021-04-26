@@ -14,7 +14,6 @@ import main.java.menu.beallitas.FoMenuBeallitas;
     protected int agreszivitas;
     protected int hanyadikIndex;
     protected static int maxTamadas;
-public AiViselkedes(){}
     /**
      * Itt dönti el az adott gépi ellenfél, hogy támadjon-e
      *

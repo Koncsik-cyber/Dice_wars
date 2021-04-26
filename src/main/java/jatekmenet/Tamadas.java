@@ -34,7 +34,7 @@ public class Tamadas {
         if (negyszogracse) palyaTipus = Negyszogracs.palya;
         else palyaTipus = Hatszogracs.palya;
         if (palyaTipus[hovaX][hovaY][hovaZ].kie == 0 && palyaTipus[honanX][honnanY][honnanZ].doboKockaSzam > 1){
-            new TamadasGyoz(honanX, honnanY, honnanZ,  hovaX, hovaY, hovaZ);
+            new TamadasGyoz(honanX, honnanY, honnanZ,  hovaX, hovaY, hovaZ, palyaTipus);
         }else if (palyaTipus[honanX][honnanY][honnanZ].doboKockaSzam > 1 && !(palyaTipus[hovaX][hovaY][hovaZ].kie == palyaTipus[honanX][honnanY][hovaZ].kie)){
             RandomSzamGenerator tamado = new RandomSzamGenerator(1,6);
             RandomSzamGenerator vedekezo = new RandomSzamGenerator(1,6);
@@ -42,9 +42,9 @@ public class Tamadas {
             int vedekezoDobas = vedekezo.randomSzamGenerator();
             System.out.println(new MentesAdatKezeles().MentesString("A támadó dobása: " + (tamadoDobas*palyaTipus[honanX][honnanY][honnanZ].doboKockaSzam)));
             System.out.println(new MentesAdatKezeles().MentesString("A védekező dobása: " + (vedekezoDobas*palyaTipus[hovaX][hovaY][hovaZ].doboKockaSzam)));
-            if ((tamadoDobas*palyaTipus[honanX][honnanY][honnanZ].doboKockaSzam) > (vedekezoDobas*palyaTipus[hovaX][hovaY][hovaZ].doboKockaSzam)) new TamadasGyoz(honanX, honnanY, honnanZ, hovaX, hovaY, hovaZ);
-            else if ((tamadoDobas*palyaTipus[honanX][honnanY][honnanZ].doboKockaSzam) < (vedekezoDobas*palyaTipus[hovaX][hovaY][hovaZ].doboKockaSzam)) new TamadasVeszit(honanX, honnanY, honnanZ);
-            else if ((tamadoDobas*palyaTipus[honanX][honnanY][honnanZ].doboKockaSzam) == (vedekezoDobas*palyaTipus[hovaX][hovaY][hovaZ].doboKockaSzam)) new TamadasVeszit(honanX, honnanY, honnanZ);
+            if ((tamadoDobas*palyaTipus[honanX][honnanY][honnanZ].doboKockaSzam) > (vedekezoDobas*palyaTipus[hovaX][hovaY][hovaZ].doboKockaSzam)) new TamadasGyoz(honanX, honnanY, honnanZ, hovaX, hovaY, hovaZ, palyaTipus);
+            else if ((tamadoDobas*palyaTipus[honanX][honnanY][honnanZ].doboKockaSzam) < (vedekezoDobas*palyaTipus[hovaX][hovaY][hovaZ].doboKockaSzam)) new TamadasVeszit(honanX, honnanY, honnanZ, palyaTipus);
+            else if ((tamadoDobas*palyaTipus[honanX][honnanY][honnanZ].doboKockaSzam) == (vedekezoDobas*palyaTipus[hovaX][hovaY][hovaZ].doboKockaSzam)) new TamadasVeszit(honanX, honnanY, honnanZ, palyaTipus);
         }
         new AIEmberTeruletek();
         if (!(FoMenuBeallitas.argumantum.length == 0)) {

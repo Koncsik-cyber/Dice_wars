@@ -2,9 +2,10 @@ package main.java.jatekmenet.ember.tamadkiratas;
 
 import main.java.jatekmenet.ember.MitTamadhatEmber;
 import main.java.jatekmenet.ember.Tamade;
+import main.java.palya.palyaelem.PalyaElem;
 
-public class MitTamadEmberTamadas extends MitTamadhatEmber {
-   public MitTamadEmberTamadas(int tamadase, int honanX, int honanY, int honanZ){
+public class MitTamadEmberTamadas {
+   public MitTamadEmberTamadas(int tamadase, int honanX, int honanY, int honanZ, PalyaElem[][][] palyaTipus){
        int hovaX=0, hovaY=0, hovaZ = 0;
        switch (tamadase){
            case 1:

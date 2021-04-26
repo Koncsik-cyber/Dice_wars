@@ -44,7 +44,7 @@ public class Main {
                 main(argumentum());
                 break;
             case 2:
-                new MainEgyesevelBeallit();
+                new MainEgyesevelBeallit(argumentum);
                 break;
             case 3:
                 foMenu.valaszt();

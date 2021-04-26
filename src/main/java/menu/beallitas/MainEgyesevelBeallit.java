@@ -10,9 +10,9 @@ import java.util.Scanner;
  * @author Koncsik Benedek (G7KJC7)
  * Ez az osztály ugy megy végig a beállitásokon, hogy csak egyesével nem kell mindenen végig menni kilehet választani mit szeretne az ember beálitani
  */
-public class MainEgyesevelBeallit extends Main {
-    public MainEgyesevelBeallit() {
-        FoMenu foMenu = new FoMenu(argumentum());
+public class MainEgyesevelBeallit {
+    public MainEgyesevelBeallit(String[] argumentum) {
+        FoMenu foMenu = new FoMenu(Main.argumentum());
         Scanner scanf = new Scanner(System.in);
         System.out.println("Gépi ellenfél beálitása--> 1");
         System.out.println("Pálya méret beálitása--> 2");
@@ -21,20 +21,20 @@ public class MainEgyesevelBeallit extends Main {
         switch (kulonValaszt) {
             case 1:
                 foMenu.gepiEllenfelBealitas();
-                main(argumentum());
+                Main.beallitas();
                 break;
             case 2:
                 foMenu.palyaMeret1();
                 foMenu.palyaMeret2();
-                main(argumentum());
+                Main.beallitas();
                 break;
             case 3:
                 foMenu.palyatipus();
-                main(argumentum());
+                Main.beallitas();
                 break;
             default:
                 System.err.println("Kérem 1 és 3 közötti számott írjon!");
-                main(argumentum());
+                Main.beallitas();
                 break;
         }
     }

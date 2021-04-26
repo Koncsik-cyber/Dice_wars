@@ -1,6 +1,5 @@
 package main.java.menu;
 import main.java.gepiellenfel.AiViselkedes;
-import main.java.jatekmenet.KovetkezoKorDobokockaElosztas;
 import main.java.menu.beallitas.FoMenuBeallitas;
 import main.java.menu.beallitas.JatekMenuEmber;
 
@@ -15,17 +14,10 @@ public class JatekMenu {
         kineltartEllenoriz();
         emberPerGep();
     }
-    public JatekMenu(){}
-    /**
-     * A tovablep() metodus végzi a körkvégén, hogy a következö játékos jöjjön
-     */
-     public void tovabbLep(){
-        System.out.println("A következő játékos jön!");
-        new KovetkezoKorDobokockaElosztas(kineltart);
-        kineltart++;
-        new JatekMenu(kineltart);
+    public JatekMenu(){
+        kineltartEllenoriz();
+        emberPerGep();
     }
-
     /**
      * Ha a kineltartEllenoriz nézzi, hogy ha a kinéltart szám nagyobb mint a gépiellenfelek száma plusz a játékos száa akkor ellöröl kezdi a számolást
      */

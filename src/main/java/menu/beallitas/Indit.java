@@ -14,8 +14,8 @@ import main.java.palya.negyszogracs.Negyszogracs;
  *A FoMenu.beVanÉllitva staticus boolean érték tárolja, azt, hogy a ember külön végig ment a gépi ellenfelek beéllitásán vagy nem.
  * Ha nem akkor meghívja a gepiEllenfél automatikus beállitását
  */
-public class Indit extends FoMenuBeallitas {
-    public Indit(int valaszt){
+public class Indit {
+    public Indit(int valaszt, int palyaMeretN, int palyaMeretM, boolean palyaTipus){
         switch (valaszt){
         case 1:
             System.out.println("Játék inditása");

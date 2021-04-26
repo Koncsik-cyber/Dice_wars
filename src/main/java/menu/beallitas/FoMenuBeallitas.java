@@ -9,7 +9,7 @@ import main.java.Main;
         protected static int gepiEllenfel = 1;
     protected static int palyaMeretM = 5;
     protected static int palyaMeretN = 5;
-    protected static boolean palyaTipus = true;
+    protected static boolean palyaTipus = true; // Ha igaz akkor onégyszőgrács ha hamis akkor hatszögrács
     protected char palyaTipusString = ' ';
     protected int valaszt;
         public static String[] argumantum = Main.argumentum();
@@ -26,7 +26,7 @@ import main.java.Main;
          * Meghivja a static TeruletElosztás osztály eloszthatoterulet metodusát ami kiszámitja menyi területett lehet elosztani a játékosok között.
          */
         public void indit(){
-           new Indit(valaszt);
+           new Indit(valaszt, palyaMeretN, palyaMeretM, palyaTipus);
         }
         public void setGepiEllenfel(int gepiEllenfel) {
             if (gepiEllenfel > 0) this.gepiEllenfel = gepiEllenfel;

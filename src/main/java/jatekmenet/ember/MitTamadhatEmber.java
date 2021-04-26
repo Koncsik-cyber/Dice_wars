@@ -14,14 +14,13 @@ public class MitTamadhatEmber{
 
     protected PalyaElem[][][] palyaTipus;
     protected  int nemTamd = 0;
-    public MitTamadhatEmber(){}
     public MitTamadhatEmber(int honanX, int honanY, int honanZ){
         if(FoMenuBeallitas.isPalyaTipus()) palyaTipus = Negyszogracs.palya;
         else palyaTipus = Hatszogracs.palya;
         if  (palyaTipus[honanX][honanY][honanZ].doboKockaSzam > 1) {
             for (int i = 0; i < palyaTipus[honanX][honanY][honanZ].szomszedok.length; i++) {
                 if (palyaTipus[honanX][honanY][honanZ].szomszedok[i].letezikASzomszed) {
-                        new MitTamademberKiras(i, honanX, honanY, honanZ);
+                        new MitTamademberKiras(i, honanX, honanY, honanZ, palyaTipus);
                     }
             }
         }else {
@@ -37,6 +36,6 @@ public class MitTamadhatEmber{
         System.out.println("Melyik irányba induljon a támadás? (1-4/6--> irja be melyik irányba 99--> mégsem támad)");
         int tamadase = scanf.nextInt();
         new MentesAdatKezeles().MentesString("Melyik irányba induljon a támadás? (1-4/6--> irja be melyik irányba 999--> mégsem támad)--> " + tamadase);
-        new MitTamadEmberTamadas(tamadase, honanX, honanY, honanZ);
+        new MitTamadEmberTamadas(tamadase, honanX, honanY, honanZ, palyaTipus);
     }
 }

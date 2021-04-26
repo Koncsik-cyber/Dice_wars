@@ -20,14 +20,21 @@ public class JatekbanVanEllenorzes {
     public JatekbanVanEllenorzes(){
         if (FoMenuBeallitas.isPalyaTipus()) {
             palya = Negyszogracs.palya;
-            zMax = 1;
         }
         else {
             palya = Hatszogracs.palya;
-            zMax = 2;
         }
-        new JatekosNyert();
-        new JatekosVesztesEgyseTipus();
-        new JatekosVesztesKettesTipus();
+        for (int i = 0; i < palya.length; i++) {
+            for (int x = 0; x < palya[i].length; x++) {
+                for (int z = 0; z < 1; z++) {
+                    if (palya[i][x][z].kie < 2) {
+                        gepiEllenfelek++;
+                    }
+                }
+            }
+        }
+        new JatekosNyert(palya);
+        new JatekosVesztesEgyseTipus(gepiEllenfelek);
+        new JatekosVesztesKettesTipus(palya);
     }
 }
