@@ -22,9 +22,9 @@ public class PalyaElem {
      * @param n -a main.java.palya két dimenziós tömb n értéke
      * @param m -a main.java.palya két dimenziós tömb m értéke
      */
-    public PalyaElem(int doboKockaSzam, boolean negyzetracs, int n, int m, int d){
+    public PalyaElem(int doboKockaSzam, boolean negyzetracs, int n, int m){
         if (negyzetracs)PalyaElemN(doboKockaSzam, n, m);
-        else PalyaElemH(doboKockaSzam, n, m, d);
+        else PalyaElemH(doboKockaSzam, n, m);
 }
 public void PalyaElemN(int doboKockaSzam, int n, int m){
 
@@ -38,18 +38,12 @@ public void PalyaElemN(int doboKockaSzam, int n, int m){
 
     //jobb fent bal lent a szomszédok
     szomszedok = new Szomszedok[4];
-    szomszedok[0] = new Szomszedok(true, n, m+1, 0);
-    szomszedok[1] = new Szomszedok(true, n-1, m, 0);
-    szomszedok[2] = new Szomszedok(true, n, m-1, 0);
-    szomszedok[3] = new Szomszedok(true, n+1, m, 0);
+    szomszedok[0] = new Szomszedok(true, n, m+1);
+    szomszedok[1] = new Szomszedok(true, n-1, m);
+    szomszedok[2] = new Szomszedok(true, n, m-1);
+    szomszedok[3] = new Szomszedok(true, n+1, m);
 }
-    @Override
-    public String toString() {
-        return kie + " " + elfoglalhatoe + " " + String.valueOf(doboKockaSzam);
-
-    }
-
-    public void PalyaElemH(int doboKockaSzam, int n, int m, int d){
+      public void PalyaElemH(int doboKockaSzam, int n, int m){
 
         PrimSzam primSzame = new PrimSzam();
         TeruletElosztas teruletElosztas = new TeruletElosztas();
@@ -61,12 +55,17 @@ public void PalyaElemN(int doboKockaSzam, int n, int m){
 
         // jobb fent bal lent térben fent egyel térben fent kettővel a szomszédok
         szomszedok = new Szomszedok[6];
-        szomszedok[0] = new Szomszedok(false, n, m+1, d);
-        szomszedok[1] = new Szomszedok(false, n-1, m, d);
-        szomszedok[2] = new Szomszedok(false, n, m-1, d);
-        szomszedok[3] = new Szomszedok(false, n+1, m, d);
-        szomszedok[4] = new Szomszedok(false, n+1, m, d+1);
-        szomszedok[5] = new Szomszedok(false, n+1, m, d+2);
+        szomszedok[0] = new Szomszedok(false, n, m+1);
+        szomszedok[1] = new Szomszedok(false, n-1, m);
+        szomszedok[2] = new Szomszedok(false, n, m-1);
+        szomszedok[3] = new Szomszedok(false, n+1, m);
+        szomszedok[4] = new Szomszedok(false, n+1, m);
+        szomszedok[5] = new Szomszedok(false, n+1, m);
+    }
+    @Override
+    public String toString() {
+        return kie + " " + elfoglalhatoe + " " + String.valueOf(doboKockaSzam);
+
     }
 
 }

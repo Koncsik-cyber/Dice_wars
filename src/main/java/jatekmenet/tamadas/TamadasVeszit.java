@@ -10,8 +10,8 @@ import main.java.palya.palyaelem.PalyaElem;
  * @author Koncsik Benedek (G7KJC7)
  */
 public class TamadasVeszit {
-    public TamadasVeszit(int honanX, int honnanY, int honnanZ, PalyaElem[][][] palyaTipus){
-        palyaTipus[honanX][honnanY][honnanZ].doboKockaSzam = 1;
+    public TamadasVeszit(int honanX, int honnanY, PalyaElem[][] palyaTipus){
+        palyaTipus[honanX][honnanY].doboKockaSzam = 1;
         AIEmberTeruletek ujraeloszt = new AIEmberTeruletek();
         ujraeloszt.aiteruletei(palyaTipus);
         System.out.println("Vesztett!");

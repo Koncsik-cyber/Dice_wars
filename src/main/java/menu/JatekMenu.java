@@ -26,7 +26,6 @@ public class JatekMenu {
             kineltart=1;
         }
     }
-
     /**
      * emberPerGep metodus dönti el, hogy emberi vagy gépi játékos jön, Asszerint készit egy uj @see JatekMenuEmber / $see AiViselkedes osztályt
      */

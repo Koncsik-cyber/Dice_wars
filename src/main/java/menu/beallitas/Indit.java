@@ -1,6 +1,7 @@
 package main.java.menu.beallitas;
 
 import main.java.beallitasok.jatekosertekek.AIEmberTeruletek;
+import main.java.gepiellenfel.aibealitasa.AutoBeallitas;
 import main.java.menu.FoMenu;
 import main.java.menu.JatekMenuBetoltes;
 import main.java.palya.Palya;
@@ -25,8 +26,7 @@ public class Indit {
             if (palyaTipus) terulet.aiteruletei(Negyszogracs.palya);
             else terulet.aiteruletei(Hatszogracs.palya);
             if (!FoMenu.beVanAllitva) {
-                FoMenu gep = new FoMenu();
-                gep.gepiEllenfel(true);
+                new AutoBeallitas();
             }
             break;
         case 2:

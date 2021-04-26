@@ -11,12 +11,12 @@ import main.java.palya.palyaelem.PalyaElem;
  * @author Koncsik Benedek (G7KJC7)
  */
 public class JatekosVesztesKettesTipus{
-    public JatekosVesztesKettesTipus(PalyaElem[][][] palya){
+    public JatekosVesztesKettesTipus(PalyaElem[][] palya){
         if (AIEmberTeruletek.teruletekSzama[1] == 1) {
             int x = AIEmberTeruletek.teruletei[1][0].x;
             int y = AIEmberTeruletek.teruletei[1][0].y;
             int Z = AIEmberTeruletek.teruletei[1][0].z;
-            if (palya[x][y][Z].doboKockaSzam == 1) {
+            if (palya[x][y].doboKockaSzam == 1) {
                 System.out.println(new MentesAdatKezeles().MentesString("A játékos vesztett"));
                 System.out.println(new MentesAdatKezeles().MentesString("<================ :( ================>"));
                 System.out.printf("Új játék?");

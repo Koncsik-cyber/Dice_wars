@@ -1,22 +1,9 @@
-1 true 4 2 true 6 0 false 6 1 true 5 2 true 7 
-0 false 3 1 true 4 2 true 5 1 true 5 2 true 3 
-1 true 1 2 true 7 1 true 2 2 true 4 1 true 6 
-2 true 5 1 true 2 2 true 1 1 true 1 0 false 8 
-2 true 8 0 false 5 1 true 5 2 true 3 1 true 7 
-A jatékos terület/i-nek száma: 11
-A 1. gépiellenfél terület/i-nek száma: 10
-10. mezőn 5 db dobokocka található.
-Induljon innen a támadás? (HA i akkor indul a támadás, kiválaszthatód melyik irányba szeretnéd. Ha n akkor visszalép az előző menűbe.)
-A 1. irányban lévő mező: 2. ellenfélé és 3 dobokockája van.
-A 2. irányban lévő mező: 2. ellenfélé és 1 dobokockája van.
-A 3. irányban lévő területett szabadon elfoglalhatja. 
-Melyik irányba induljon a támadás? (1-4/6--> irja be melyik irányba 999--> mégsem támad)--> 2
-Induljon a terület elfoglalása!
-========>X<========
-A támadó dobása: 10
-A védekező dobása: 2
-Sikeresen elfoglalva!
-A jatékos terület/i-nek száma: 12
-A 1. gépiellenfél terület/i-nek száma: 9
+1 true 6 2 true 2 0 false 6 1 true 8 2 true 4 
+1 true 2 0 false 6 0 false 3 2 true 2 1 true 4 
+2 true 4 0 false 2 1 true 3 0 false 5 0 false 4 
+2 true 7 1 true 8 2 true 6 0 false 5 0 false 8 
+0 false 3 1 true 3 2 true 1 1 true 1 2 true 8 
+A jatékos terület/i-nek száma: 8
+A 1. gépiellenfél terület/i-nek száma: 8
 A mentés vége!
 ------------------------------<==========================================>------------------------------

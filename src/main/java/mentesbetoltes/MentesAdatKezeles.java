@@ -12,14 +12,13 @@ public class MentesAdatKezeles {
      * @author Koncsik Benedek (G7KJC7)
      * @param palya megkaplya az aktuálisan elkészitett négy/hat-szögrács pályát amit soronként elment a mentesAdat listába
      */
-    public void mentesPalya(PalyaElem[][][] palya){
+    public void mentesPalya(PalyaElem[][] palya){
         mentesAdat = new LinkedList<>();
         String sor = "";
         for (int i = 0; i < palya.length; i++) {
             for (int x = 0; x < palya[i].length; x++) {
-                for (int z = 0; z < palya[i][x].length; z++) {
-                    sor += palya[i][x][z] + " ";
-                }
+                    sor += palya[i][x] + " ";
+
             }
             mentesAdat.add(sor);
             sor = "";

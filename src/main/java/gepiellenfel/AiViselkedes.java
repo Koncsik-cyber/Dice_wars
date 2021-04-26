@@ -42,14 +42,14 @@ import main.java.menu.beallitas.FoMenuBeallitas;
      */
     public boolean tamede(int hanyadik){
         RandomSzamGenerator rn = new RandomSzamGenerator(1, 100);
-        if (AiBealitas.gepiEllenfel[hanyadik].nehezseg == 10) new AiOkos();
+        //if (AiBealitas.gepiEllenfel[hanyadik].nehezseg == 10) new AiOkos();
         if (rn.randomSzamGenerator() % AiBealitas.gepiEllenfel[hanyadik].nehezseg == 0) return true;
             else return false;
         }
     public void tamad(int hanyadik){
         AiTamadas tamad = new AiTamadas(hanyadik);
         Tamadas aiTamd = new Tamadas();
-        aiTamd.tamdasIndul(tamad.aiTamadX, tamad.aiTamadY, tamad.aiTamadZ, tamad.aiTamadSzomszedX,tamad.aiTamadSzomszedY, tamad.aiTamadSzomszedZ, FoMenuBeallitas.isPalyaTipus());
+        aiTamd.tamdasIndul(tamad.aiTamadX, tamad.aiTamadY, tamad.aiTamadSzomszedX,tamad.aiTamadSzomszedY, FoMenuBeallitas.isPalyaTipus());
         maxTamadas++;
         if (maxTamadas == 5){
             maxTamadas=0;

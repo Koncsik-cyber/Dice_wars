@@ -19,15 +19,21 @@ public class JatekMenuBetoltes {
             ReadFile rd = new ReadFile();
             kiras = (ArrayList<String>) rd.Readfile("mentes.txt");
         } catch (IOException e) {
-            System.err.println("Nem sikerült beolvasni a fájlt!\n Létezik a mentes.txt? \n Jó helyen van?");
-            e.printStackTrace();
+            System.err.println("Nem sikerült beolvasni a fájlt!\n Létezik a mentes.txt? \n Jó helyen van?\nKérlek ellenőrizd :)");
+            //e.printStackTrace(); //Nem íratom ki alapból
         }
 
         Scanner sc = new Scanner(System.in);
 
         int i = 0;
         do {
-            System.out.print(kiras.get(i));
+            try {
+                System.out.print(kiras.get(i));
+            }catch (IndexOutOfBoundsException e){
+                System.err.println("A mentes.txt-nek van tartalma?\nVagy esetleg üres?\nKérlek ellenőrizd :)");
+                //e.printStackTrace(); //Nem íratom ki alapból
+            }
+
             i++;
             sc.nextLine();
         }while (i < kiras.size());

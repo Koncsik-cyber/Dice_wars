@@ -10,10 +10,10 @@ import main.java.palya.palyaelem.PalyaElem;
  * @author Koncsik Benedek (G7KJC7)
  */
 public class TamadasGyoz {
-    public TamadasGyoz(int honanX, int honnanY, int honnanZ, int hovaX, int hovaY, int hovaZ, PalyaElem[][][] palyaTipus){
-        palyaTipus[hovaX][hovaY][hovaZ].doboKockaSzam =+ (palyaTipus[honanX][honnanY][honnanZ].doboKockaSzam-1);
-        palyaTipus[honanX][honnanY][honnanZ].doboKockaSzam = 1;
-        palyaTipus[hovaX][hovaY][hovaZ].kie =  palyaTipus[honanX][honnanY][honnanZ].kie;
+    public TamadasGyoz(int honanX, int honnanY, int hovaX, int hovaY, PalyaElem[][] palyaTipus){
+        palyaTipus[hovaX][hovaY].doboKockaSzam =+ (palyaTipus[honanX][honnanY].doboKockaSzam-1);
+        palyaTipus[honanX][honnanY].doboKockaSzam = 1;
+        palyaTipus[hovaX][hovaY].kie =  palyaTipus[honanX][honnanY].kie;
         AIEmberTeruletek ujraeloszt = new AIEmberTeruletek();
         ujraeloszt.aiteruletei(palyaTipus);
         System.out.println("Sikeresen elfoglalva!");

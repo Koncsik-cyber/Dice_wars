@@ -12,7 +12,7 @@ import main.java.palya.palyaelem.PalyaElem;
  * @author Koncsik Benedek (G7KJC7)
  */
 public class JatekosNyert {
-    public JatekosNyert(PalyaElem[][][] palya) {
+    public JatekosNyert(PalyaElem[][] palya) {
         for (int i = 1; i < FoMenuBeallitas.getGepiEllenfel() + 2; i++) {
             if (AIEmberTeruletek.teruletekSzama[i] == 0) {
                 Ellenfelek.ellenfelekTomb.add(i, (-1 * i));

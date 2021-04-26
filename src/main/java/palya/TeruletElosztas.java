@@ -12,7 +12,6 @@ public class TeruletElosztas {
     public static int[] kinekHanyTeruletvan;
     public static int eloszottTerulet;
     public static int aktualJatekos = 0;
-    public TeruletElosztas(){}
     /**
      * elosztahto terület metodus létrehoz egy anyi elemű tombot ahány gépi ellenfél van +1 ami a játékos
      * és kiszámolja menyi területett lehet maximum elosztani
@@ -27,7 +26,7 @@ public class TeruletElosztas {
      * ellenörzi, hogy az aktualis játékos létetzik-e ha nem akkor 0 ra azza az "emberre" álitja
      * a  kaphatemég metodust meghívja és ha igazza(true) tér vissza továbblép (ellenörzi, hogy az aktuális játékosnak menyi területe van)
      * ha tovább lép akkor a kinakVanTerulet tömbe az aktuuális játékoshoz tartozo értéket megnöveli egyel az elosztahtoTerulet változot meg csökenti
-     * (eloszottTerulet csökenti ennek a debugmod nál van haszna ellenörzéskor)
+     * (eloszottTerulet csökenti ennek a debugmod-nál van haszna ellenörzéskor)
      * és az aktuális játékos növeli egyel
      * @return -visszatér azzal a játékossal aki akpja aterületett vagy ha semleges terület akkor 0-val
      */

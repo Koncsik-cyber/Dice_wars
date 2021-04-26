@@ -18,25 +18,23 @@ public class Hatszogracs {
      * -és a 6 szomszédja
      * debugMode ha az argumentumba benne szerepel csak akkor fut le vizualizája a pálya felépitését
      */
-    public static PalyaElem[][][] palya;
+    public static PalyaElem[][] palya;
 
     public Hatszogracs(int palyaMeretN, int palyaMeretM) {
-        palya = new PalyaElem[palyaMeretM][palyaMeretN][2];
+        palya = new PalyaElem[palyaMeretM][palyaMeretN];
         for (int i = 0; i < palyaMeretN; i++) {
             for (int x = 0; x < palyaMeretM; x++) {
-                for (int z = 0; z < 3; z++) {
                     RandomSzamGenerator doboKockaElosztas = new RandomSzamGenerator(1, 8);
                     int dobokockakSzama = doboKockaElosztas.randomSzamGenerator();
-                    palya[i][x][z] = new PalyaElem(dobokockakSzama, false, i, x, z);
+                    palya[i][x] = new PalyaElem(dobokockakSzama, false, i, x);
                 }
             }
-        }
         new MentesAdatKezeles().mentesPalya(palya);
         if (!(FoMenuBeallitas.argumantum.length == 0)) {
             for (int i = 0; i < FoMenuBeallitas.argumantum.length; i++) {
                 if (FoMenuBeallitas.argumantum[i].equals("debuggMode") || FoMenuBeallitas.argumantum[i].equals("palyaMegjelenites")) {
                     Debugger palyaDebug = new Debugger();
-                    palyaDebug.Hatszogracs(palya);
+                    palyaDebug.palyaMegjelenites(palya);
                 }
             }
         }
@@ -44,7 +42,7 @@ public class Hatszogracs {
             for (int i = 0; i < FoMenuBeallitas.argumantum.length; i++) {
                 if (FoMenuBeallitas.argumantum[i].equals("debuggMode") || FoMenuBeallitas.argumantum[i].equals("szomszedok")) {
                     Debugger szomszedekEllenorzes = new Debugger();
-                    szomszedekEllenorzes.szomszedEllenorzesH(palya);
+                    szomszedekEllenorzes.szomszedEllenorzes(palya);
                 }
             }
         }

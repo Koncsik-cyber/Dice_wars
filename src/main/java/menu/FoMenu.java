@@ -1,6 +1,8 @@
 package main.java.menu;
 
 import main.java.gepiellenfel.AiBealitas;
+import main.java.gepiellenfel.aibealitasa.AutoBeallitas;
+import main.java.gepiellenfel.aibealitasa.EgyesevelBeallitas;
 import main.java.menu.beallitas.FoMenuBeallitas;
 import java.util.Scanner;
 /**
@@ -10,16 +12,14 @@ import java.util.Scanner;
 public class FoMenu {
     /**
      * @see FoMenuBeallitas - ebben az osztályban állitodnak be az itt bevitt adatok <\ td>
-     *     setterken keresztül
+     *setterken keresztül
      */
     FoMenuBeallitas menu = new FoMenuBeallitas();
     Scanner scanf = new Scanner(System.in);
-    public boolean autoBeallit = false;
     public static boolean  beVanAllitva = false;
     public FoMenu(String[] args){
         menu.setArgumantum(args);
     }
-    public FoMenu(){}
     /**
      * Itt lehet kivalaszatani a különböző beállitásokat!
      */
@@ -32,12 +32,11 @@ public class FoMenu {
         System.out.println("Vissza a beállitásokba--> 2");
         int valaszt = scanf.nextInt();
         if (valaszt == 1){
-            gepiEllenfel(false);
+            new EgyesevelBeallitas();
             beVanAllitva = true;
         }
         else {
-            autoBeallit = true;
-            gepiEllenfel(true);
+            new AutoBeallitas();
             beVanAllitva = true;
         }
     }
@@ -57,7 +56,6 @@ public class FoMenu {
         int palyaMeretN = scanf.nextInt();
         menu.setPalyaMeretN(palyaMeretN);
     }
-
     /**
      * main.java.palya tipusát állitja a main.java.menu osztályban a setter átalakitja az n értékét igaz(true) ra a h értékét meg hamisra(false)
      */
@@ -66,7 +64,6 @@ public class FoMenu {
         char palyaTipusString = scanf.next().charAt(0);
         menu.setPalyatipus(palyaTipusString);
     }
-
     /**
      * Játék kezdése ha nem mentek végig a beálitáson akkor default értékekkel indul a játék.
      * A main.java.menu osztály indit metodusát hivja meg
@@ -77,13 +74,5 @@ public class FoMenu {
         int valaszt = scanf.nextInt();
         menu.setValaszt(valaszt);
         menu.indit();
-    }
-    /**
-     * @param autoBeallit ha igaz akkor a main.java.ai csomagban az AiBealitas osztály autoBeaálitása metodust hivja meg ha hamis akkor az elöbb emlitett clason belül az egyesevelBealit metodust hivja meg.
-     * @see AiBealitas
-     */
-    public void gepiEllenfel(boolean autoBeallit){
-        AiBealitas ai = new AiBealitas(autoBeallit);
-
     }
 }

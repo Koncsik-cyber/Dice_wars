@@ -10,7 +10,7 @@ import main.java.palya.palyaelem.PalyaElem;
  * @author Koncsik Benedek (G7KJC7)
  */
 public class Negyszogracs {
-    public static PalyaElem[][][] palya;
+    public static PalyaElem[][] palya;
     public Negyszogracs(int palyaMeretN, int palyaMeretM) {
 /**
  * Palya generálása
@@ -22,12 +22,12 @@ public class Negyszogracs {
  * -és a 4 szomszédja
  * debugMode ha az argumentumba benne szerepel csak akkor fut le vizualizája a pálya felépitését
  */
-        palya = new PalyaElem[palyaMeretN][palyaMeretM][1];
+        palya = new PalyaElem[palyaMeretN][palyaMeretM];
         for (int i = 0; i < palyaMeretN; i++) {
             for (int x = 0; x < palyaMeretM; x++) {
                 RandomSzamGenerator doboKockaElosztas = new RandomSzamGenerator(1,8);
                 int dobokockakSzama = doboKockaElosztas.randomSzamGenerator();
-                palya[i][x][0] = new PalyaElem(dobokockakSzama, true, i, x, 0);
+                palya[i][x] = new PalyaElem(dobokockakSzama, true, i, x);
             }
         }
         new MentesAdatKezeles().mentesPalya(palya);
@@ -35,7 +35,7 @@ public class Negyszogracs {
             for (int i = 0; i < FoMenuBeallitas.argumantum.length; i++) {
                 if (FoMenuBeallitas.argumantum[i].equals("debuggMode") || FoMenuBeallitas.argumantum[i].equals("palyaMegjelenites")) {
                     Debugger palyaDebug = new Debugger();
-                    palyaDebug.negyzetracs(palya);
+                    palyaDebug.palyaMegjelenites(palya);
                 }
             }
         }

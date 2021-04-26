@@ -13,15 +13,11 @@ public class AiBealitas {
     protected String[] menyireAgresziv = {"Etanol ", "Pájinka", "Fokos Hajós", "Campari keserű likőr", "Bakter Cherry", "Garrone Cherry", "Tojáslikőr", "Pezsgő", "Aperol", "Szóda"};
 
      public static main.java.gepiellenfel.Ai[] gepiEllenfel;
-    public AiBealitas() {}
     /**
      * Létre hoz egy Ai tipuso static tömböt melynek a mérete a gépi ellenfelek száma
-     * @param automatikus ha igaz(true) akkor az autoBealit metodust meghivja ha hamis(false) akkor a egyesevelBealit metodu fut le.
      */
-    public AiBealitas(boolean automatikus){
+    public AiBealitas(){
         gepiEllenfel = new main.java.gepiellenfel.Ai[FoMenuBeallitas.getGepiEllenfel()];
-        if (automatikus) new AutoBeallitas();
-        else new EgyesevelBeallitas();
     }
 
     public void setAgreszvitas(int agreszvitas) {

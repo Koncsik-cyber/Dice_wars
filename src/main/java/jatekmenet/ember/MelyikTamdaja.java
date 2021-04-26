@@ -30,18 +30,18 @@ public class MelyikTamdaja {
                 melyik = melyik-1;
                 if (FoMenuBeallitas.isPalyaTipus()){
                     System.out.println(new MentesAdatKezeles().MentesString(kiirasMelyik + ". mezőn " +
-                            Negyszogracs.palya[AIEmberTeruletek.teruletei[1][melyik].x][AIEmberTeruletek.teruletei[1][melyik].y][AIEmberTeruletek.teruletei[1][melyik].z].doboKockaSzam
+                            Negyszogracs.palya[AIEmberTeruletek.teruletei[1][melyik].x][AIEmberTeruletek.teruletei[1][melyik].y].doboKockaSzam
                             + " db dobokocka található."));
                 }
                 else {
                     System.out.println(new MentesAdatKezeles().MentesString(kiirasMelyik + ". mezőn " +
-                            Hatszogracs.palya[AIEmberTeruletek.teruletei[1][melyik].x][AIEmberTeruletek.teruletei[1][melyik].y][AIEmberTeruletek.teruletei[1][melyik].z].doboKockaSzam
+                            Hatszogracs.palya[AIEmberTeruletek.teruletei[1][melyik].x][AIEmberTeruletek.teruletei[1][melyik].y].doboKockaSzam
                             + " db dobokocka található."));
                 }
                 System.out.println(new MentesAdatKezeles().MentesString("Induljon innen a támadás? (HA i akkor indul a támadás, kiválaszthatód melyik irányba szeretnéd. Ha n akkor visszalép az előző menűbe.)"));
                 Scanner scanf = new Scanner(System.in);
                 char tamadase = scanf.next().charAt(0);
-                new Tamade().tamade(tamadase, AIEmberTeruletek.teruletei[1][melyik].x, AIEmberTeruletek.teruletei[1][melyik].y, AIEmberTeruletek.teruletei[1][melyik].z);
+                new Tamade().tamade(tamadase, AIEmberTeruletek.teruletei[1][melyik].x, AIEmberTeruletek.teruletei[1][melyik].y);
                 new MelyikTamdaja();
             } else {
                 System.out.println(new MentesAdatKezeles().MentesString("Nem létezik ez az pálya elem!"));
