@@ -27,7 +27,7 @@ public class Negyszogracs {
             for (int x = 0; x < palyaMeretM; x++) {
                 RandomSzamGenerator doboKockaElosztas = new RandomSzamGenerator(1,8);
                 int dobokockakSzama = doboKockaElosztas.randomSzamGenerator();
-                palya[i][x] = new PalyaElem(dobokockakSzama, true, i, x);
+                palya[i][x] = new PalyaElem(dobokockakSzama, false, true, i, x);
             }
         }
         new MentesAdatKezeles().mentesPalya(palya);

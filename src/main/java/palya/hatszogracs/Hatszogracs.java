@@ -21,12 +21,17 @@ public class Hatszogracs {
     public static PalyaElem[][] palya;
 
     public Hatszogracs(int palyaMeretN, int palyaMeretM) {
+        System.out.println("Hhatszőgrács");
+        boolean parosParatlan = false;
         palya = new PalyaElem[palyaMeretM][palyaMeretN];
         for (int i = 0; i < palyaMeretN; i++) {
             for (int x = 0; x < palyaMeretM; x++) {
                     RandomSzamGenerator doboKockaElosztas = new RandomSzamGenerator(1, 8);
                     int dobokockakSzama = doboKockaElosztas.randomSzamGenerator();
-                    palya[i][x] = new PalyaElem(dobokockakSzama, false, i, x);
+                    if (i % 2 == 0){
+                        parosParatlan = true;
+                    }
+                    palya[i][x] = new PalyaElem(dobokockakSzama, false, parosParatlan, i, x);
                 }
             }
         new MentesAdatKezeles().mentesPalya(palya);

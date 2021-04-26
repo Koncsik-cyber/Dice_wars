@@ -1,9 +1,9 @@
-1 true 6 2 true 2 0 false 6 1 true 8 2 true 4 
-1 true 2 0 false 6 0 false 3 2 true 2 1 true 4 
-2 true 4 0 false 2 1 true 3 0 false 5 0 false 4 
-2 true 7 1 true 8 2 true 6 0 false 5 0 false 8 
-0 false 3 1 true 3 2 true 1 1 true 1 2 true 8 
-A jatékos terület/i-nek száma: 8
-A 1. gépiellenfél terület/i-nek száma: 8
+1 true 6 2 true 2 1 true 4 0 false 5 2 true 6 
+1 true 4 2 true 4 1 true 5 2 true 5 1 true 8 
+0 false 3 2 true 3 1 true 8 0 false 1 0 false 1 
+2 true 3 1 true 3 2 true 5 1 true 5 2 true 4 
+1 true 5 2 true 7 1 true 5 2 true 8 1 true 6 
+A jatékos terület/i-nek száma: 11
+A 1. gépiellenfél terület/i-nek száma: 10
 A mentés vége!
 ------------------------------<==========================================>------------------------------

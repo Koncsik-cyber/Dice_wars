@@ -9,7 +9,7 @@ import main.java.Main;
         protected static int gepiEllenfel = 1;
     protected static int palyaMeretM = 5;
     protected static int palyaMeretN = 5;
-    protected static boolean palyaTipus = true; // Ha igaz akkor onégyszőgrács ha hamis akkor hatszögrács
+    protected static boolean palyaTipus = false; // Ha igaz akkor négyszőgrács ha hamis akkor hatszögrács
     protected char palyaTipusString = ' ';
     protected int valaszt;
         public static String[] argumantum = Main.argumentum();
