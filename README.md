@@ -9,3 +9,5 @@ Windows parancssorból:
     
 IntelJ a main.java Packig-ben lévő Main-t kell futattni
 
+
+Ha egyesével beállitom az ait akkor nem kezeli le a betütt
