@@ -12,6 +12,6 @@ Windows parancssorból:
     java main.java.Main
     
 IntelJ a main.java packig-ben lévő Main-t kell futtatni
-
+Java 11
 
 Ui.: Remélem minden rendem megy :)
